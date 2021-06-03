@@ -1,28 +1,49 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Left />
+    <Right />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Left from "./components/Left.vue";
+import Right from "./components/Right.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Left,
+    Right,
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+html,
+body{
+  margin: 0;
+  box-sizing: border-box;
+}
+ul{
+  list-style-type: none;
+}
+#app{
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+#app > div{
+  border: 3px solid #000;
+  box-sizing: border-box;
+  width: 45vw;
+  height: 90vh;
+  padding: 30px;
+}
+
+input{
+  border: none;
+  background: transparent;
+  outline: none;
 }
 </style>
